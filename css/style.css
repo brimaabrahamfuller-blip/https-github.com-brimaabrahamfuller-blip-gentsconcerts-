@@ -1148,3 +1148,63 @@ a {
         padding: 1px 6px;
     }
 }
+
+/* ============ UPDATED NAVBAR & LOGO STYLES ============ */
+.logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo-img { height: 40px; }
+}
+
+.navbar-menu .nav-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.navbar-menu .nav-link {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-logo {
+        flex: 0 0 auto;
+    }
+    .navbar-menu {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* ============ FOOTER SOCIAL STYLES ============ */
+.footer-social {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.social-link {
+  color: #C9A84C;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+.social-link i {
+  margin-right: 6px;
+}
+.social-link:hover {
+  color: #ffffff;
+}
