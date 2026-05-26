@@ -182,6 +182,18 @@ a {
     width: 100%;
 }
 
+/* ============ NAVBAR ICONS ============ */
+.nav-link i {
+    margin-right: 6px;
+    color: #C9A84C;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover i {
+    color: #ffffff;
+}
+
 /* ============ COMING SOON BADGE ============ */
 .coming-soon-badge {
     display: inline-block;
