@@ -525,3 +525,31 @@ document.addEventListener("DOMContentLoaded", function() {
     initializeCountdown();
     initializeCalculator();
 });
+
+/* ============ DROPDOWN TOGGLE FOR TOUCH/TABLET ============ */
+function initializeDropdownToggle() {
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdown = document.querySelector('.nav-dropdown');
+    
+    if (dropdownTrigger && dropdown) {
+        dropdownTrigger.addEventListener('click', function(e) {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isVisible = dropdown.style.display === 'flex';
+                dropdown.style.display = isVisible ? 'none' : 'flex';
+            }
+        });
+        
+        // Close dropdown when clicking elsewhere
+        document.addEventListener('click', function(event) {
+            if (!dropdownTrigger.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeDropdownToggle();
+});
