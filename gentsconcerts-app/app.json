@@ -18,8 +18,13 @@
       }
     },
     "plugins": [
-      "expo-font",
-      "expo-sharing"
+      "expo-font"
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
     ]
   }
 }

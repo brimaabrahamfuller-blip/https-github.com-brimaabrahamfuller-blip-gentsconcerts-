@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   View, Text, StyleSheet, ScrollView, TouchableOpacity, 
-  Animated, Share, Dimensions 
+  Animated, Dimensions 
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../styles/theme';
@@ -49,14 +49,8 @@ export default function EventDetailScreen({ route, navigation }) {
     ).start();
   }, []);
 
-  const onShare = async () => {
-    try {
-      await Share.share({
-        message: `Check out ${event.name} on GentsConcerts! Date: ${event.date} at ${event.venue}.`,
-      });
-    } catch (error) {
-      console.log(error.message);
-    }
+  const onShare = () => {
+    alert('Sharing feature simplified for preview.');
   };
 
   return (
