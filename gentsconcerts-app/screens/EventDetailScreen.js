@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   View, Text, StyleSheet, ScrollView, TouchableOpacity, 
-  Animated, Dimensions 
+  Animated, Dimensions, Alert 
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../styles/theme';
@@ -50,7 +50,7 @@ export default function EventDetailScreen({ route, navigation }) {
   }, []);
 
   const onShare = () => {
-    alert('Sharing feature simplified for preview.');
+    Alert.alert('Share', 'Sharing feature simplified for preview.');
   };
 
   return (
